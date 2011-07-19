@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-GurusorocabaComBr::Application.load_tasks
+Gurusorocaba::Application.load_tasks
