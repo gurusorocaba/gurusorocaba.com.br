@@ -1,4 +1,6 @@
 Gurusorocaba::Application.routes.draw do
+  get "index/index"
+
   devise_for :users
 
   # The priority is based upon order of creation:
