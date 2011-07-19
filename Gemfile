@@ -15,6 +15,7 @@ gem "bson_ext", "1.3.1"
 gem "devise", "1.4.2"
 gem "mongoid_slug", "0.8.1", :require => "mongoid/slug"
 gem "will_paginate", "~> 3.0.pre2"
+gem "mongoid_rails_migrations"
 
 group :production do
   gem "execjs", "~> 1.2.0"
