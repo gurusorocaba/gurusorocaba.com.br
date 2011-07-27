@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gurusorocaba</title>
-  <%= stylesheet_link_tag    "application" %>
+  <title>guru sorocaba</title>
+  <%= stylesheet_link_tag    "structure", "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="header">
+    <div class="container">
+      <h1><%= link_to "guru sorocaba", root_path %></h1>
+      <nav>
+        <% if user_signed_in? %>
+          <%= link_to "editar perfil", edit_user_registration_path %>
+          <%= link_to "logout", logout_path %>
+        <% else %>
+          <%= link_to "cadastrar", new_user_registration_path %>
+          <%= link_to "login", login_path %>
+        <% end %>
+      </nav>
+      <% flash.each do |name, msg| %>
+        <ul class="form-messages success">
+          <li class="title"><%= raw msg %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+  <div id="content">
+    <div class="container">
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>

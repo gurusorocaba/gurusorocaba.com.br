@@ -1,0 +1,269 @@
+pt-BR:
+  resources:
+    users: "usuários"
+  
+  notice:
+      created: "%{model} criado com sucesso"
+      updated: "%{model} atualizado com sucesso"
+      deleted: "%{model} deletado com sucesso"
+    
+  # formatos de data e hora
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d %b %Y"
+      long: "%d %B %Y"
+    
+    day_names: [DOMINGO, SEGUNDA, TERÇA, QUARTA, QUINTA, SEXTA, SÁBADO]
+    abbr_day_names: [DOM, SEG, TER, QUA, QUI, SEX, SÁB]
+    month_names: [~, janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro]
+    abbr_month_names: [~, jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez]
+    order: [:day, :month, :year]
+  
+  time:
+    formats:
+      default:  "%A, %d de %B de %Y, %H:%M"
+      short:    "%A, %d/%m/%y – %H:%M"
+      long:     "%A, %d de %B de %Y às %H:%M"
+      post:     "%d/%m/%Y %H:%M"
+      html5:    "%Y-%m-%dT%X%z"
+      
+    am: ""
+    pm: ""
+  
+  # distancia do tempo em palavras
+  datetime:
+    distance_in_words:
+      half_a_minute: "meio minuto"
+      less_than_x_seconds:
+        one: "menos de 1 segundo"
+        other: "menos de %{count} segundos"
+      
+      x_seconds:
+        one: "1 segundo"
+        other: "%{count} segundos"
+      
+      less_than_x_minutes:
+        one: "menos de um minuto"
+        other: "menos de %{count} minutos"
+      
+      x_minutes:
+        one: "1 minuto"
+        other: "%{count} minutos"
+      
+      about_x_hours:
+        one: "aproximadamente 1 hora"
+        other: "aproximadamente %{count} horas"
+      
+      x_days:
+        one: "1 dia"
+        other: "%{count} dias"
+      
+      about_x_months:
+        one: "aproximadamente 1 mês"
+        other: "aproximadamente %{count} meses"
+      
+      x_months:
+        one: "1 mês"
+        other: "%{count} meses"
+      
+      about_x_years:
+        one: "aproximadamente 1 ano"
+        other: "aproximadamente %{count} anos"
+      
+      over_x_years:
+        one: "mais de 1 ano"
+        other: "mais de %{count} anos"
+
+      almost_x_years:
+        one: "quase 1 ano"
+        other: "quase %{count} anos"
+    
+    prompts:
+      year: "Ano"
+      month: "Mês"
+      day: "Dia"
+      hour: "Hora"
+      minute: "Minuto"
+      second: "Segundos"
+
+  # numeros
+  number:
+    format:
+      precision: 3
+      separator: ","
+      delimiter: "."
+    currency:
+      format:
+        unit: "R$"
+        precision: 2
+        format: "%u %n"
+        separator: ","
+        delimiter: "."
+    percentage:
+      format:
+        delimiter: "."
+    precision:
+      format:
+        delimiter: "."
+    human:
+      format:
+        precision: 2
+        delimiter: "."
+        significant: true
+        strip_unsignificant_zeros: true
+      # number_to_human_size()
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+      # number_to_human()
+      # new in rails 3: please add to other locales
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: "mil"
+          million:
+            one: milhão
+            other: milhões
+          billion:
+            one: bilhão
+            other: bilhões
+          trillion:
+            one: trilhão
+            other: trilhões
+          quadrillion:
+            one: quatrilhão
+            other: quatrilhões
+
+  # Usado no Array.to_sentence
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " e "
+      last_word_connector: " e "
+ 
+  errors:
+    messages:
+      inclusion: "não está incluído na lista"
+      exclusion: "não está disponível"
+      invalid: "não é válido"
+      confirmation: "não está de acordo com a confirmação"
+      accepted: "deve ser aceito"
+      empty: "não pode ficar vazio"
+      blank: "não pode ficar em branco"
+      too_long: "é muito longo (máximo: %{count} caracteres)"
+      too_short: "é muito curto (mínimo: %{count} caracteres)"
+      wrong_length: "não possui o tamanho esperado (%{count} caracteres)"
+      taken: "já está em uso"
+      not_a_number: "não é um número"
+      not_an_integer: "não é um número inteiro"
+      greater_than: "deve ser maior do que %{count}"
+      greater_than_or_equal_to: "deve ser maior ou igual a %{count}"
+      equal_to: "deve ser igual a %{count}"
+      less_than: "deve ser menor do que %{count}"
+      less_than_or_equal_to: "deve ser menor ou igual a %{count}"
+      odd: "deve ser ímpar"
+      even: "deve ser par"
+      record_invalid: "a validação falhou: %{errors}"
+      expired: "expirou, solicite uma nova"
+      not_found: "não encontrado"
+      already_confirmed: "confirmado, tente fazer login"
+      not_locked: "não está travado"
+      not_saved:
+        one: "1 erro proibiu esse(a) %{resource} de ser salvo:"
+        other: "%{count} erros proibiram esse(a) %{resource} de ser salvo:"
+        
+  mongoid:
+    errors:
+      messages:
+        taken:
+          já está utilizada
+        document_not_found:
+          Nenhum documento encontrado para a classe %{klass} com os id(s) %{identifiers}.
+        invalid_database:
+          A base de dados deverá ser uma Mongo::DB, em vez de %{name}.
+        invalid_type:
+          O campo foi definido como %{klass}, mas recebeu uma instância de %{other} com
+          o valor %{value}.
+        invalid_options:
+          "Invalid option :%{invalid} provided to relation :%{name}. Valid options
+          are: %{valid}."
+        unsupported_version:
+          MongoDB %{version} não é suportada, por favor atualize para a
+          versão %{mongo_version}.
+        validations:
+          A validação falhou - %{errors}.
+        invalid_collection:
+          O acesso à colecção para %{klass} não é permitido porque
+          é um documento embutido, por favor acesse à colecção através
+          do documento raiz.
+        invalid_field:
+          Não é permitido definir um campo com o nome %{name}. Não defina
+          campos que entrem em conflito com os nomes dos atributos internos e métodos
+          do Mongoid. Use Document#instance_methods para consultar esses nomes.
+        too_many_nested_attribute_records:
+          A aceitação de atributos encadeados para %{association} encontra-se limitada
+          a %{limit} registros.
+        embedded_in_must_have_inverse_of:
+          As opções para uma associação embedded_in devem incluir inverse_of.
+        dependent_only_references_one_or_many:
+          A opção The dependent => destroy|delete que é fornecida
+          é apenas válida para associações references_one ou references_many.
+        association_cant_have_inverse_of:
+          A definição de inverse_of nesta associação não é permitida. Apenas
+          use esta opção em embedded_in ou references_many as array.
+        unsaved_document:
+          Você não pode chamar os métodos create ou create! de uma associação
+          relacional (%{document}) cujo pai (%{base}) ainda não foi salvo.
+    models: 
+        user: "usuário"
+    attributes:
+      user:
+        name: "nome"
+        email: "e-mail"
+        password: "senha"
+        password_confirmation: "confirme a senha"
+
+  devise:
+    newsletters:
+      newsletter:
+        send_instructions: "E-mail cadastrado. Obrigado!"
+    failure:
+      unauthenticated: "Você precisa fazer login ou criar um usuário antes de continuar."
+      unconfirmed: "Você precisa confirmar sua conta antes de continuar."
+      locked: "Sua conta está bloqueada."
+      invalid: "Email ou senha inválidos."
+      invalid_token: "Chave de autenticação inválida."
+      timeout: "Sua sessão expirou. Por favor, faça o login novamente para continuar."
+      inactive: "Sua conta não foi ativada ainda."
+    sessions:
+      signed_in: "Login feito com sucesso."
+      signed_out: "Logout feito com sucesso."
+    passwords:
+      send_instructions: "Você receberá, dentro de alguns minutos, um email com instruções sobre como recuperar sua senha."
+      updated: "Sua senha foi alterada com sucesso. Você está logado agora."
+    confirmations:
+      send_instructions: "Você receberá, dentro de alguns minutos, um email com instruções sobre como confirmar seu cadastro."
+      confirmed: "Seu cadastro foi confirmado. Não se esqueça de alterar a sua senha clicando em EDITAR PERFIL."
+    registrations:
+      signed_up: "Seu cadastro foi efetuado com sucesso."
+      updated: "Você atualizou seu cadastro com sucesso."
+      destroyed: "Sua conta foi cancelada com sucesso."
+    unlocks:
+      send_instructions: "Você receberá, dentro de alguns minutos, um email com instruções sobre como desbloquear seu cadastro."
+      unlocked: "Seu cadastro foi desbloqueado com sucesso. Você está logado agora."
+    mailer:
+      confirmation_instructions:
+        subject: "Instruções: confirmação de cadastro"
+      reset_password_instructions:
+        subject: "Instruções: recuperação de senha"
+      unlock_instructions:
+        subject: "Instruções: desbloquear cadastro"
