@@ -1,4 +1,25 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+body.admin {}
+  table { width: 100%; margin: 16px 2px 16px 2px; padding: 0; text-align: left; }
+  thead tr { background: #DDD; }
+  tr.odd { background: #FFF; }
+  tr.even { background: #F2F2F2; }
+  th, td { padding: 2px 2px 4px 2px; }
+  
+body.admin h1 { font-size: 24px; line-height: 32px; }
+
+/*body.admin input[type="text"], body.admin input[type="password"], body.admin input[type="search"] { border: 1px solid #999; border-radius: 3px; font-family: inherit; font-size: 12px; color: #666; padding: 2px; margin: 0; }*/
+input[type="text"], input[type="email"], input[type="password"], input[type="search"], textarea { border: 1px solid #999; border-radius: 3px; font-family: inherit; font-size: 12px; color: #666; padding: 2px; margin: 0; }
+textarea { height: 160px; padding: 2px; }
+
+.grid_4 input[type="text"] { width: 230px !important; margin: 0 !important; }
+.grid_4 textarea { width: 230px; margin: 0; }
+.grid_4 select { max-width: 230px; }
+
+.grid_6 input[type="text"], .grid_6 input[type="password"], .grid_6 input[type="search"] { width: 350px; }
+.grid_9 input[type="text"], .grid_9 input[type="password"], .grid_9 input[type="search"] { width: 530px; }
+
+.form-header { margin-bottom: 16px; margin-left: 2px; margin-right: 2px; }
+
+.field { margin-bottom: 16px; }
+label { color: #333; display: block; font-weight: bold; margin: 0; padding: 2px 2px 4px 2px; }
+label.no-block { color: #333; display: inline; font-weight: normal; margin: 0; padding: 0px; }

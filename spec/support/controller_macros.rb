@@ -1,9 +1,9 @@
 module ControllerMacros
-  # def login_admin
-  #   before do
-  #     @request.env["devise.mapping"] = Devise.mappings[:admin]
-  #     @admin = Factory.create(:admin)
-  #     sign_in @admin
-  #   end
-  # end
+  def login_administrator
+    before do
+      @request.env["devise.mapping"] = Devise.mappings[:administrator]
+      @administrator = Factory.create(:administrator)
+      sign_in @administrator
+    end
+  end
 end

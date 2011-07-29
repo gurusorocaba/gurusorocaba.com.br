@@ -1,0 +1,31 @@
+<div class="container">  
+  <div class="form-header">
+    <h1>agenda</h1>
+    <%= link_to '+ novo', new_admin_agenda_path %>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>título</th>
+        <th>tipo</th>
+        <th>data</th>
+        <th>local</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @agendas.each do |a| %>
+        <tr class="<%= cycle('odd', 'even') %>">
+          <td><%= a.title %></td>
+          <td><%= t("agenda.types.#{a.type}") %></td>
+          <td><%= l(a.date) unless a.date.nil? %></td>
+          <td><%= truncate(a.place, :length => 50) %></td>
+          <td>
+            <%= link_to 'editar', edit_admin_agenda_path(a) %>
+            <%= link_to 'deletar', admin_agenda_path(a), confirm: 'você tem certeza?', method: :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

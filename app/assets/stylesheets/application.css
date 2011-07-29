@@ -5,14 +5,15 @@ a:visited { color: inherit; text-decoration: none; }
 a:active { color: #333; text-decoration: none; }
 a:hover { color: #333; text-decoration: none; }
  
-#header { height: 50px; }
+#header { min-height: 50px; }
 	#header h1 { font-size: 32px; line-height: 36px; padding: 20px 4px 0px 4px; color: #CC2304; }
 	
-#content { margin-top: 60px; }
+#content { margin-top: 20px; }
 h2 { font-weight: bold; font-size: 18px; line-height: 21px; margin-top: -1px; margin-bottom: 8px; padding: 0px 4px 0px 4px; }
 
 nav { color: #999; font-weight: bold; font-size: 18px; line-height: 21px; margin-top: -1px; margin-bottom: 8px; padding: 0px 4px 0px 4px; }
 	nav a:after { content: " /"; }
+	nav a.active { color: #CC2304; }
 
 .models .model { max-height: 280px; } 
 .model { padding-bottom: 4px; background-color: #e6e6e6; margin-bottom: 8px; }
@@ -34,21 +35,11 @@ textarea { height: 160px; }
 label { color: #333; display: block; font-weight: bold; margin: 0; padding: 2px 2px 4px 2px; }
 label.no-block { color: #333; display: inline; font-weight: normal; margin: 0; padding: 0px; }
 
-#error_explanation, .form-messages { font-size: 13px; line-height: 18px; padding: 8px 16px; margin: 12px 0px 24px 0px; border-bottom-left-radius: 6px 6px; border-bottom-right-radius: 6px 6px; border-top-left-radius: 6px 6px; border-top-right-radius: 6px 6px; }
+#error_explanation, .form-messages { font-size: 13px; line-height: 18px; padding: 8px 16px; margin-top: 12px; border-bottom-left-radius: 6px 6px; border-bottom-right-radius: 6px 6px; border-top-left-radius: 6px 6px; border-top-right-radius: 6px 6px; }
   #error_explanation h2, .form-messages h2 { color: #C00; margin: 0px 0px 0px 0px; font-weight: bold; }
   #error_explanation ul, .form-messages ul { list-style: disc inside; }
 #error_explanation, .form-messages.error { color: #C00; background: #FFEEEE; }
 .form-messages.success { color: #3C3; background: #DDFFDD; font-weight: bold; }
-
-/* attachment magick */
-.thumbnails {margin-top:5px; font-size: 12px; line-height: 16px; font-family: Helvetica, Arial, Sans-serif; color:#000;}
-.thumbnails h4 {margin:15px 0px 15px 0px; border-top:2px solid #CCC;}
-.attachment_magick_image  {margin:0px 0px 0px 0px; /*clear:left;*/ padding: 3px 3px 3px 3px; cursor:pointer;}
-.attachment_magick_image:hover {}
-
-.attachment_magick_image p {margin:0px;}
-.attachment_magick_image a {float:right;}
-.attachment_magick_image input[type="text"] {width:228px; font-family:inherit; font-size:1em; border:1px solid #999; -webkit-border-radius:3px; -moz-border-radius:3px; margin-top:2px;}
 
 .form-devise { padding: 0 4px; }
 	.form-devise h2 {margin-bottom: 20px;}

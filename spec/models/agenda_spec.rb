@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe "agenda/index.html.erb" do
+describe Agenda do
   pending "add some examples to (or delete) #{__FILE__}"
 end

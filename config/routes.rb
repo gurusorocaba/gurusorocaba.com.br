@@ -1,7 +1,5 @@
 Gurusorocaba::Application.routes.draw do
 
-  get "admin/agenda/index"
-
   devise_for :users do
     get "/login" => "devise/sessions#new"
     get "/logout" => "devise/sessions#destroy"
@@ -10,6 +8,10 @@ Gurusorocaba::Application.routes.draw do
   devise_for :administrators do
     get "/admin" => "devise/sessions#new"
     get "/admin/logout" => "devise/sessions#destroy"
+  end
+  
+  namespace :admin do 
+    resources :agendas, :path => "agenda"
   end
   
   root :to => "index#index"

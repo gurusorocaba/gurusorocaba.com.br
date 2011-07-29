@@ -2,25 +2,22 @@
 <html>
 <head>
   <title>guru sorocaba - administrator</title>
-  <%= stylesheet_link_tag    "structure", "application" %>
+  <%= stylesheet_link_tag    "structure", "application", "admin/admin" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="admin">
   <div id="header">
     <div class="container">
       <h1><%= link_to "guru sorocaba", root_path %></h1>
       <nav>
         <% if administrator_signed_in? %>
           <%= link_to current_administrator.email, "#" %>
+          <%= link_to "agenda", admin_agendas_path, :class => controller.controller_name == "agendas" ? "active" : "" %>
           <%= link_to "logout", admin_logout_path %>
         <% end %>
       </nav>
-      <% flash.each do |name, msg| %>
-        <ul class="form-messages success">
-          <li class="title"><%= raw msg %></li>
-        </ul>
-      <% end %>
+      <%= render "shared/flash_messages" %>
     </div>
   </div>
   <div id="content">
@@ -28,6 +25,5 @@
       <%= yield %>
     </div>
   </div>
-
 </body>
 </html>

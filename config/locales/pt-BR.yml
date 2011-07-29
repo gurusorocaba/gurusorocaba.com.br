@@ -1,6 +1,12 @@
 pt-BR:
   resources:
     users: "usuários"
+    
+  agenda:
+    types:
+      event: "evento"
+      meeting: "encontro"
+      course: "curso"
   
   notice:
       created: "%{model} criado com sucesso"
@@ -22,7 +28,7 @@ pt-BR:
   
   time:
     formats:
-      default:  "%A, %d de %B de %Y, %H:%M"
+      default:  "%A, %d de %B de %Y as %H:%M"
       short:    "%A, %d/%m/%y – %H:%M"
       long:     "%A, %d de %B de %Y às %H:%M"
       post:     "%d/%m/%Y %H:%M"

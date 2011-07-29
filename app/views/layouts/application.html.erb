@@ -19,11 +19,7 @@
           <%= link_to "login", login_path %>
         <% end %>
       </nav>
-      <% flash.each do |name, msg| %>
-        <ul class="form-messages success">
-          <li class="title"><%= raw msg %></li>
-        </ul>
-      <% end %>
+      <%= render "shared/flash_messages" %>
     </div>
   </div>
   <div id="content">
