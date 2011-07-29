@@ -1,4 +1,4 @@
-class Admin
+class Administrator
   include Mongoid::Document
 
   devise :database_authenticatable,
