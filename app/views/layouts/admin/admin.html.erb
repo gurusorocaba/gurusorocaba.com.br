@@ -14,6 +14,7 @@
         <% if administrator_signed_in? %>
           <%= link_to current_administrator.email, "#" %>
           <%= link_to "agenda", admin_agendas_path, :class => controller.controller_name == "agendas" ? "active" : "" %>
+          <%= link_to "usuários", admin_users_path, :class => controller.controller_name == "users" ? "active" : "" %>
           <%= link_to "logout", admin_logout_path %>
         <% end %>
       </nav>

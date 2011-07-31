@@ -9,4 +9,6 @@ class User
   field :github_account
   
   validates_presence_of :name
+  
+  index :created_at, :background => true
 end

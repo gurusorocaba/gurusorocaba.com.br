@@ -1,0 +1,29 @@
+<div class="container">  
+  <div class="form-header">
+    <h1>usuários</h1>
+    <%= @total %> usuários cadastrados
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>nome</th>
+        <th>e-mail</th>
+        <th>github</th>
+        <th>criado em</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |u| %>
+        <tr class="<%= cycle('odd', 'even') %>">
+          <td><%= u.name %></td>
+          <td><%= u.email %></td>
+          <td><%= u.github_account %></td>
+          <td><%= l(u.created_at) %></td>
+          <td>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
