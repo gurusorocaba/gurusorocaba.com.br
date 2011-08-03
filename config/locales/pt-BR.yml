@@ -243,6 +243,7 @@ pt-BR:
       newsletter:
         send_instructions: "E-mail cadastrado. Obrigado!"
     failure:
+      already_authenticated: "Você já estava logado =)"
       unauthenticated: "Você precisa fazer login ou criar um usuário antes de continuar."
       unconfirmed: "Você precisa confirmar sua conta antes de continuar."
       locked: "Sua conta está bloqueada."
