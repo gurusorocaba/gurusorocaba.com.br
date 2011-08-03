@@ -1,7 +1,7 @@
 class Admin::AgendasController < Admin::AdminController
 
   def index
-    @agendas = Agenda.all
+    @agendas = Agenda.all.desc(:date)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -19,7 +19,7 @@ class Admin::AgendasController < Admin::AdminController
   end
 
   def edit
-    @agenda = Agenda.find(params[:id])
+    @agenda = Agenda.find_by_slug(params[:id])
   end
 
   def create
@@ -37,7 +37,7 @@ class Admin::AgendasController < Admin::AdminController
   end
 
   def update
-    @agenda = Agenda.find(params[:id])
+    @agenda = Agenda.find_by_slug(params[:id])
 
     respond_to do |format|
       if @agenda.update_attributes(params[:agenda])
@@ -51,7 +51,7 @@ class Admin::AgendasController < Admin::AdminController
   end
 
   def destroy
-    @agenda = Agenda.find(params[:id])
+    @agenda = Agenda.find_by_slug(params[:id])
     @agenda.destroy
 
     respond_to do |format|

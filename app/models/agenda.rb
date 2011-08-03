@@ -2,6 +2,7 @@ class Agenda
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::MultiParameterAttributes
+  include Mongoid::Slug
   
   field :title
   field :description
@@ -13,4 +14,8 @@ class Agenda
   
   validates_presence_of :title, :date, :place
   validates_inclusion_of :type, :in => TYPES
+  
+  slug :title
+
+  index :date, :background => true
 end

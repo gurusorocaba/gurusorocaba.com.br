@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-
 describe Admin::AgendasController do
 
   login_administrator
@@ -27,7 +26,7 @@ describe Admin::AgendasController do
   describe "GET edit" do
     it "assigns the requested agenda as @agenda" do
       agenda = Agenda.create! valid_attributes
-      get :edit, :id => agenda.id.to_s
+      get :edit, :id => agenda.to_param
       assigns(:agenda).should eq(agenda)
     end
   end
@@ -78,18 +77,18 @@ describe Admin::AgendasController do
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
         Agenda.any_instance.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, :id => agenda.id, :agenda => {'these' => 'params'}
+        put :update, :id => agenda.to_param, :agenda => {'these' => 'params'}
       end
 
       it "assigns the requested agenda as @agenda" do
         agenda = Agenda.create! valid_attributes
-        put :update, :id => agenda.id, :agenda => valid_attributes
+        put :update, :id => agenda.to_param, :agenda => valid_attributes
         assigns(:agenda).should eq(agenda)
       end
 
       it "redirects to the agenda" do
         agenda = Agenda.create! valid_attributes
-        put :update, :id => agenda.id, :agenda => valid_attributes
+        put :update, :id => agenda.to_param, :agenda => valid_attributes
         response.should redirect_to(edit_admin_agenda_path(agenda))
       end
     end
@@ -99,7 +98,7 @@ describe Admin::AgendasController do
         agenda = Agenda.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Agenda.any_instance.stub(:save).and_return(false)
-        put :update, :id => agenda.id.to_s, :agenda => {}
+        put :update, :id => agenda.to_param, :agenda => {}
         assigns(:agenda).should eq(agenda)
       end
 
@@ -107,7 +106,7 @@ describe Admin::AgendasController do
         agenda = Agenda.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Agenda.any_instance.stub(:save).and_return(false)
-        put :update, :id => agenda.id.to_s, :agenda => {}
+        put :update, :id => agenda.to_param, :agenda => {}
         response.should render_template("edit")
       end
     end
@@ -117,13 +116,13 @@ describe Admin::AgendasController do
     it "destroys the requested agenda" do
       agenda = Agenda.create! valid_attributes
       expect {
-        delete :destroy, :id => agenda.id.to_s
+        delete :destroy, :id => agenda.to_param
       }.to change(Agenda, :count).by(-1)
     end
 
     it "redirects to the agendas list" do
       agenda = Agenda.create! valid_attributes
-      delete :destroy, :id => agenda.id.to_s
+      delete :destroy, :id => agenda.to_param
       response.should redirect_to(admin_agendas_url)
     end
   end

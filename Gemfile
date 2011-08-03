@@ -13,7 +13,7 @@ gem "mongoid", "2.0.2"
 gem "bson_ext", "1.3.1"
 
 gem "devise", "1.4.2"
-gem "mongoid_slug", "0.8.1", :require => "mongoid/slug"
+gem "mongoid_slug", "0.8.2"
 gem "will_paginate", "~> 3.0.pre2"
 gem "mongoid_rails_migrations"
 
@@ -29,7 +29,6 @@ group :development, :test do
   gem "simplecov", :require => false
   gem "factory_girl_rails"
   gem "ffaker"
-  #gem "colorific"
   gem "ZenTest"
   gem "database_cleaner"
   
