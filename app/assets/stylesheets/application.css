@@ -14,12 +14,14 @@ h2 { font-weight: bold; font-size: 18px; line-height: 21px; margin-top: -1px; ma
 nav { color: #999; font-weight: bold; font-size: 18px; line-height: 21px; margin-top: -1px; margin-bottom: 8px; padding: 0px 4px 0px 4px; }
 	nav a:after { content: " /"; }
 	nav a.active { color: #CC2304; }
-
-.models .model { max-height: 280px; } 
-.model { padding-bottom: 4px; background-color: #e6e6e6; margin-bottom: 8px; }
-	.model img { margin-bottom: 2px; }
-	.model span { padding: 0px 0px 2px 4px; font-weight: bold; }
-
+	
+.section { color: #666; }
+	.section .title { color: #000; font-weight: bold; margin-bottom: 14px; }
+	.section p a:after { content: " /"; }
+	.section .agenda { margin-bottom: 10px; }
+	.section .agenda .agenda-title { font-weight: bold; }
+	.section .agenda .description { margin-bottom: 5px; }
+	.section .about p { margin-bottom: 10px; }
 
 input[type="text"], input[type="email"], input[type="password"], input[type="search"], textarea { border: 1px solid #999; border-radius: 3px; font-family: inherit; font-size: 12px; color: #666; padding: 2px; margin: 0; }
 textarea { height: 160px; }
