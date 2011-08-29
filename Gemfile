@@ -9,7 +9,7 @@ gem 'json'
 gem 'uglifier'
 gem 'jquery-rails'
 
-gem "mongoid", "2.1.4"
+gem "mongoid", "2.2.0"
 gem "bson_ext", "1.3.1"
 
 gem "devise", "1.4.2"
