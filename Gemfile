@@ -1,13 +1,16 @@
-source 'http://rubygems.org'
+source "http://rubygems.org"
 
-gem 'rails', '3.1.0.rc8'
+gem "rails", "3.1.0.rc8"
 
 # Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+# gem "rails",     :git => "git://github.com/rails/rails.git"
 
-gem 'json'
-gem 'uglifier'
-gem 'jquery-rails'
+group :assets do
+  gem "uglifier"
+end
+
+gem "json"
+gem "jquery-rails"
 
 gem "mongoid", "2.2.0"
 gem "bson_ext", "1.3.1"
