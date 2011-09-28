@@ -12,17 +12,17 @@ end
 gem "json"
 gem "jquery-rails"
 
-gem "mongoid", "2.2.0"
-gem "bson_ext", "1.3.1"
+gem "mongoid", "2.2.1"
+gem "bson_ext", "1.4"
 
-gem "devise", "1.4.3"
+gem "devise", "1.4.7"
 gem "mongoid_slug", "0.8.2"
 gem "will_paginate", "~> 3.0.pre2"
 gem "mongoid_rails_migrations"
 
 group :production do
-  gem "execjs", "~> 1.2.0"
-  gem "therubyracer", "~> 0.9.2"
+  gem "execjs", "~> 1.2.9"
+  gem "therubyracer", "~> 0.9.4"
 end
 
 group :development, :test do
