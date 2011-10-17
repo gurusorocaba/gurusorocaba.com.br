@@ -12,7 +12,7 @@ end
 gem "json"
 gem "jquery-rails"
 
-gem "mongoid", "2.3.0"
+gem "mongoid", "2.3.2"
 gem "bson_ext", "1.4"
 
 gem "devise", "1.4.7"
