@@ -9,6 +9,8 @@ Gurusorocaba::Application.routes.draw do
     get "/admin" => "devise/sessions#new"
     get "/admin/logout" => "devise/sessions#destroy"
   end
+
+  resources :agendas, :path => "agenda", :only => :show
   
   namespace :admin do 
     resources :agendas, :path => "agenda"

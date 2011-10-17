@@ -2,11 +2,10 @@
   <p class="title">agenda</p>
   <% @agendas.each do |a| %>
   <div class="agenda">
-    <p class="agenda-title"><%= a.title %></p>
+    <p class="agenda-title"><%= link_to a.title, a %></p>
     <p class="date"><%= l(a.date) unless a.date.nil? %></p>
-    <p class="type"><%= t("agenda.types.#{a.type}") %></p>
-    <p class="description"><%= a.description.gsub("\n", "<br />").html_safe %></p>
-    <p class="place"><%= a.place %></p>
+    <p class="type"><%= t("agenda.types.#{a.type}") %></p>    
+    <p class="details"><%= link_to "+ detalhes", a %></p>
   </div>
   <% end %>
 </div>
@@ -28,7 +27,7 @@
 
 <div class="grid_2 section">
   <p class="title">contato</p>
-  <p>
+  <p class="slash">
     <%= link_to "twitter", "http://twitter.com/gurusorocaba", :rel => "nofollow", :target => "_blank" %>
     <%= link_to "facebook", "http://www.facebook.com/groups/gurusorocaba", :rel => "nofollow", :target => "_blank" %>
     <%= mail_to "gurusorocaba@gmail.com", "e-mail" %>

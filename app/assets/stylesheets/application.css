@@ -17,9 +17,9 @@ nav { color: #999; font-weight: bold; font-size: 18px; line-height: 21px; margin
 	
 .section { color: #666; }
 	.section .title { color: #000; font-weight: bold; margin-bottom: 14px; }
-	.section p a:after { content: " /"; }
+	.section p.slash a:after { content: " /"; }
 	.section .agenda { margin-bottom: 10px; }
-	.section .agenda .agenda-title { font-weight: bold; }
+	.section .agenda .agenda-title, .section .agenda .details { font-weight: bold; }
 	.section .agenda .description { margin-bottom: 5px; }
 	.section .about p { margin-bottom: 10px; }
 
