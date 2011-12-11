@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem "rails", "3.1.1"
+gem "rails", "3.1.3"
 
 # Bundle edge Rails instead:
 # gem "rails",     :git => "git://github.com/rails/rails.git"
@@ -9,32 +9,27 @@ group :assets do
   gem "uglifier"
 end
 
-gem "json"
+gem "mongoid", "2.3.4"
+gem "bson_ext", "1.5.1"
+
 gem "jquery-rails"
-
-gem "mongoid", "2.3.2"
-gem "bson_ext", "1.4"
-
-gem "devise", "1.4.7"
+gem "devise", "1.5.2"
 gem "mongoid_slug", "0.8.3"
-# gem "will_paginate", "~> 3.0.pre2"
 gem "mongoid_rails_migrations"
 
 group :production do
-  gem "execjs", "~> 1.2.9"
-  gem "therubyracer", "~> 0.9.4"
+  gem "execjs", "~> 1.2.12"
 end
 
 group :development, :test do
-  gem "ruby-debug19"
-  gem "rspec-rails", "~> 2.6.0"
+  gem "rspec-rails"
+end
+
+group :test do
   gem "capybara"
   gem "simplecov", :require => false
   gem "factory_girl_rails"
   gem "ffaker"
   gem "ZenTest"
   gem "database_cleaner"
-  
-  # Pretty printed test output
-  gem "turn", :require => false
 end
