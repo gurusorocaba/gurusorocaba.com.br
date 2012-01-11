@@ -9,16 +9,16 @@ group :assets do
   gem "uglifier"
 end
 
-gem "mongoid", "2.3.4"
-gem "bson_ext", "1.5.1"
+gem "mongoid", "2.4.0"
+gem "bson_ext", "1.5.2"
 
 gem "jquery-rails"
-gem "devise", "1.5.2"
+gem "devise", "1.5.3"
 gem "mongoid_slug", "0.8.3"
 gem "mongoid_rails_migrations"
 
 group :production do
-  gem "execjs", "~> 1.2.12"
+  gem "execjs", "~> 1.2.13"
 end
 
 group :development, :test do
