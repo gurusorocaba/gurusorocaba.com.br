@@ -9,7 +9,7 @@ group :assets do
   gem "uglifier"
 end
 
-gem "mongoid", "2.4.2"
+gem "mongoid", "2.4.4"
 gem "bson_ext", "1.5.2"
 
 gem "jquery-rails"
