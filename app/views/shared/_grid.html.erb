@@ -1,0 +1,17 @@
+<% unless Rails.env.production? %>
+<script type="text/javascript">
+$(document).ready(function() {
+  pageUnits = 'px';
+  colUnits = 'px';
+  pagewidth = 960;
+  columns = 12;
+  columnwidth = 72;
+  gutterwidth = 8;
+  pagetopmargin = 20;
+  rowheight = 14;
+  gridonload = 'off'
+  makehugrid();
+  setgridonload();
+});
+</script>
+<% end %>

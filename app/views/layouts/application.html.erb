@@ -4,6 +4,8 @@
   <title>guru sorocaba</title>
   <%= stylesheet_link_tag    "structure", "application" %>
   <%= javascript_include_tag "application" %>
+  <%= development_assets unless Rails.env.production? %>
+  <%= render "shared/grid" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -24,7 +26,7 @@
   </div>
   <div id="content">
     <div class="container">
-      <%= yield %>
+      <%= yield %>      
     </div>
   </div>
   <%= render "shared/analytics" %>
