@@ -15,4 +15,13 @@ describe AgendasController do
     end
   end
 
+  describe "GET past agendas" do
+    it "should assigns past agendas" do
+      agenda = Factory.create(:agenda, :date => Date.yesterday)
+      get :past
+      assigns(:agendas).should eq([agenda])
+      response.should be_success
+    end
+  end
+
 end

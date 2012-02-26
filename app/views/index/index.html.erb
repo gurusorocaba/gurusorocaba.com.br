@@ -13,6 +13,8 @@
   <% else %>
     <div class="agenda">no momento não há eventos confirmados</div>
   <% end %>
+
+  <p class="agenda-past"><%= link_to "eventos passados", past_agendas_path %></p>
 </div>
 
 <div class="grid_4 section">
@@ -30,20 +32,6 @@
   </div>
 </div>
 
-<div class="grid_2 section">
-  <p class="title">contato</p>
-  <p>
-    leve o guru sorocaba <strong>(gratuitamente)</strong> para palestrar, ministrar um curso ou fazer um encontro na sua universidade ou empresa :)
-    <br /><br />
-  </p>
-  <p class="slash">
-    <%= link_to "twitter", "http://twitter.com/gurusorocaba", :rel => "nofollow", :target => "_blank" %>
-    <%= link_to "facebook", "http://www.facebook.com/groups/gurusorocaba", :rel => "nofollow", :target => "_blank" %>
-    <%= mail_to "gurusorocaba@gmail.com", "e-mail" %>
-  </p>
-</div>
+<%= render "shared/contact" %>
 
-<div class="grid_3 section">
-  <p class="title">apoio</p>
-  <%= link_to "webbynode", "http://webbynode.com", :rel => "nofollow", :target => "_blank" %>
-</div>
+<%= render "shared/partners" %>

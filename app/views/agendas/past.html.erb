@@ -1,0 +1,15 @@
+<div class="grid_7 section">
+  <p class="title">agenda</p>
+  <% @agendas.each do |a| %>
+    <div class="agenda">
+      <p class="agenda-title"><%= link_to a.title, a %></p>
+      <p class="date"><%= l(a.date) unless a.date.nil? %></p>
+      <p class="type"><%= t("agenda.types.#{a.type}") %></p>    
+      <p class="details"><%= link_to "+ detalhes", a %></p>
+    </div>
+  <% end %>
+</div>
+
+<%= render "shared/contact" %>
+
+<%= render "shared/partners" %>

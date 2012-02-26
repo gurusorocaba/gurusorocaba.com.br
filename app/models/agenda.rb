@@ -14,6 +14,9 @@ class Agenda
   
   validates_presence_of :title, :date, :place
   validates_inclusion_of :type, :in => TYPES
+
+  scope :future, where(:date.gte => Date.today).desc(:date)
+  scope :past, where(:date.lte => Date.today).desc(:date)
   
   slug :title
 

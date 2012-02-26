@@ -10,7 +10,9 @@ Gurusorocaba::Application.routes.draw do
     get "/admin/logout" => "devise/sessions#destroy"
   end
 
-  resources :agendas, :path => "agenda", :only => :show
+  resources :agendas, :path => "agenda", :only => :show do
+    get "passados", :on => :collection, :action => :past, :as => :past
+  end
   
   namespace :admin do 
     resources :agendas, :path => "agenda"
