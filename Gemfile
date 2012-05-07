@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem "rails", "3.2.2"
+gem "rails", "~> 3.2.2"
 
 # Bundle edge Rails instead:
 # gem "rails",     :git => "git://github.com/rails/rails.git"
@@ -9,8 +9,8 @@ group :assets do
   gem "uglifier"
 end
 
-gem "mongoid", "2.4.5"
-gem "bson_ext", "1.6.0"
+gem "mongoid", "~> 2.4.5"
+gem "bson_ext", "~> 1.6.0"
 
 gem "jquery-rails"
 gem "devise", "1.5.3"
