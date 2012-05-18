@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "authentication" do
   before do
-    @administrator = Factory.create(:administrator, :password => '123456', :password_confirmation => '123456')
+    @administrator = FactoryGirl.create(:administrator, :password => '123456', :password_confirmation => '123456')
   end
 
   describe "logging" do

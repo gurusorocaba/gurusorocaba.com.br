@@ -3,7 +3,7 @@ require 'spec_helper'
 describe AgendasController do
 
 	def valid_attributes
-    Factory.attributes_for(:agenda)
+    FactoryGirl.attributes_for(:agenda)
   end
 
   describe "GET 'show'" do
@@ -17,7 +17,7 @@ describe AgendasController do
 
   describe "GET past agendas" do
     it "should assigns past agendas" do
-      agenda = Factory.create(:agenda, :date => Date.yesterday)
+      agenda = FactoryGirl.create(:agenda, :date => Date.yesterday)
       get :past
       assigns(:agendas).should eq([agenda])
       response.should be_success

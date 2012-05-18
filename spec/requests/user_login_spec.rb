@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "authentication" do
   before do
-    @user = Factory.create(:user, :password => '123456', :password_confirmation => '123456')
+    @user = FactoryGirl.create(:user, :password => '123456', :password_confirmation => '123456')
   end
 
   describe "logging" do

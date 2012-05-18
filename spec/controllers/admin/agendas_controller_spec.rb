@@ -5,7 +5,7 @@ describe Admin::AgendasController do
   login_administrator
   
   def valid_attributes
-    Factory.attributes_for(:agenda)
+    FactoryGirl.attributes_for(:agenda)
   end
 
   describe "GET index" do

@@ -5,7 +5,7 @@ describe Admin::UsersController do
   login_administrator
   
   def valid_attributes
-    Factory.attributes_for(:user)
+    FactoryGirl.attributes_for(:user)
   end
 
   describe "GET index" do

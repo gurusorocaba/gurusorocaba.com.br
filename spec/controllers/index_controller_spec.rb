@@ -3,7 +3,7 @@ require 'spec_helper'
 describe IndexController do
   
   def agenda_attributes
-    Factory.attributes_for(:agenda)
+    FactoryGirl.attributes_for(:agenda)
   end
 
   describe "GET 'index'" do
