@@ -29,6 +29,6 @@ class User
   validates_presence_of :email
   validates_presence_of :encrypted_password
   validates_presence_of :name
-  
-  index :created_at, :background => true
+    
+  index({ created_at: 1 })
 end

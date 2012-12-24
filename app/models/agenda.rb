@@ -20,5 +20,5 @@ class Agenda
   
   slug :title
 
-  index :date, :background => true
+  index({ date: 1 })
 end
