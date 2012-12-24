@@ -13,7 +13,7 @@ gem "mongoid",  "~> 2.4.5"
 gem "bson_ext", "~> 1.6.0"
 
 gem "jquery-rails",             "~> 2.1.3"
-gem "devise",                   "1.5.3"
+gem "devise",                   "2.1.2"
 gem "mongoid_slug",             "0.9"
 gem "mongoid_rails_migrations", "~> 1.0.0"
 
