@@ -6,30 +6,26 @@ gem "rails", "~> 3.2.2"
 # gem "rails",     :git => "git://github.com/rails/rails.git"
 
 group :assets do
-  gem "uglifier"
+  gem "uglifier", ">= 1.0.3"
 end
 
-gem "mongoid", "~> 2.4.5"
+gem "mongoid",  "~> 2.4.5"
 gem "bson_ext", "~> 1.6.0"
 
-gem "jquery-rails"
-gem "devise", "1.5.3"
-gem "mongoid_slug", "0.9"
-gem "mongoid_rails_migrations"
+gem "jquery-rails",             "~> 2.1.3"
+gem "devise",                   "1.5.3"
+gem "mongoid_slug",             "0.9"
+gem "mongoid_rails_migrations", "~> 1.0.0"
 
-group :production do
-  gem "execjs"
-end
 
 group :development, :test do
-  gem "rspec-rails"
+  gem "rspec-rails", "2.12.0"
 end
 
 group :test do
-  gem "capybara"
-  gem "simplecov", :require => false
-  gem "factory_girl_rails"
-  gem "ffaker"
-  gem "ZenTest"
-  gem "database_cleaner"
+  gem "capybara",           "~> 2.0.1"
+  gem "simplecov",          "~> 0.7.1", :require => false
+  gem "factory_girl_rails", "~> 4.1.0"
+  gem "ffaker",             "~> 1.15.0"
+  gem "database_cleaner",   "~> 0.9.1"
 end
