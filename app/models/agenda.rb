@@ -10,7 +10,7 @@ class Agenda
   field :date, :type => DateTime
   field :place
   
-  TYPES = %W( event meeting course dojo )
+  TYPES = %W( course dojo event hack_day meeting mentoring )
   
   validates_presence_of :title, :date, :place
   validates_inclusion_of :type, :in => TYPES
