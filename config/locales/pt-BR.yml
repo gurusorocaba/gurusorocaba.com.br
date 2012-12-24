@@ -4,10 +4,12 @@ pt-BR:
     
   agenda:
     types:
-      event: "evento"
-      meeting: "encontro"
-      course: "curso"
-      dojo: "dojo"
+      course:    "curso"
+      dojo:      "dojo"
+      event:     "evento"
+      hack_day:  "hack day"
+      meeting:   "encontro"
+      mentoring: "mentoria"
   
   notice:
       created: "%{model} criado com sucesso"

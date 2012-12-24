@@ -1,12 +1,14 @@
 Gurusorocaba::Application.routes.draw do
 
-  devise_for :users do
-    get "/login" => "devise/sessions#new"
+  devise_for :users
+  devise_scope :user do
+    get "/login"  => "devise/sessions#new"
     get "/logout" => "devise/sessions#destroy"
   end
-  
-  devise_for :administrators do
-    get "/admin" => "devise/sessions#new"
+
+  devise_for :administrators
+  devise_scope :administrator do
+    get "/admin"        => "devise/sessions#new"
     get "/admin/logout" => "devise/sessions#destroy"
   end
 

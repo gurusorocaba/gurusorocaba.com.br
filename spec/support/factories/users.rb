@@ -1,6 +1,8 @@
-Factory.define :user do |u|
-  u.name Faker::Name.name
-  u.email Faker::Internet.email
-  u.password "1234567"
-  u.password_confirmation "1234567"
+FactoryGirl.define do
+  factory :user do
+    name                  "user"
+    email                 "user@gurusorocaba.com.br"
+    password              "123456"
+    password_confirmation "123456"
+  end
 end
