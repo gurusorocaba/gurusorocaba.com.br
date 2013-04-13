@@ -9,6 +9,8 @@ gem "devise",                   "~> 2.2.3"
 gem "mongoid_slug",             "~> 3.1.1"
 gem "mongoid_rails_migrations", "~> 1.0.1"
 
+gem  "coveralls", require: false
+
 group :assets do
   gem "uglifier", ">= 1.0.3"
 end
@@ -21,8 +23,6 @@ group :development, :test do
   gem "capybara",           "~> 2.1.0"
   gem "rspec-rails",        "~> 2.13.0"
   gem "factory_girl_rails", "~> 4.2.1"
-
-  gem  "coveralls", require: false
 end
 
 group :test do
