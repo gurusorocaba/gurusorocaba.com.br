@@ -6,3 +6,6 @@ rvm:
 
 gemfile:
   - Gemfile
+
+script:
+  - cp config/database.travis.yml config/database.yml
