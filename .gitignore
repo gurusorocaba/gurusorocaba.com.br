@@ -8,3 +8,4 @@ tmp/
 coverage
 config/database.yml
 config/mongoid.yml
+.coveralls.yml
