@@ -21,6 +21,8 @@ group :development, :test do
   gem "capybara",           "~> 2.1.0"
   gem "rspec-rails",        "~> 2.13.0"
   gem "factory_girl_rails", "~> 4.2.1"
+
+  gem  "coveralls", require: false
 end
 
 group :test do
