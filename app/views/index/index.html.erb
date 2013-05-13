@@ -6,7 +6,7 @@
     <div class="agenda">
       <p class="agenda-title"><%= link_to a.title, a %></p>
       <p class="date"><%= l(a.date) unless a.date.nil? %></p>
-      <p class="type"><%= t("agenda.types.#{a.type}") %></p>    
+      <p class="type"><%= t("agenda.types.#{a.type}") %></p>
       <p class="details"><%= link_to "+ detalhes", a %></p>
     </div>
     <% end %>
@@ -27,17 +27,9 @@
       <strong>ruby on rails</strong> é um framework de desenvolvimento web (gratuito e de código aberto) otimizado para produtividade sustentável e a diversão do programador. permite que você escreva código de forma elegante, favorecendo a convenção ao invés da configuração.
     </p>
     <p>
-      o objetivo do <strong>guru sorocaba (grupo de usuários ruby de sorocaba)</strong> é divulgar e disseminar ruby, rails e outras tecnologias web em sorocaba e região.
+      o objetivo do <strong>guru sorocaba (grupo de usuários ruby de sorocaba)</strong> é desenvolver a comunidade tecnológica de sorocaba-sp e região.
     </p>
   </div>
-
-  <p class="title">contribua</p>
-  <div class="about">
-    <p class="agenda-past">
-      <%= link_to "ajude a organizar os eventos", "http://blog.lucasrenan.com/ajude-a-organizar-o-guru-sorocaba/", :target => "_blank" %>
-    </p>
-  </div>
-
 </div>
 
 <%= render "shared/contact" %>
