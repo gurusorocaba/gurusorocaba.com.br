@@ -2,7 +2,7 @@
   <p class="title">agenda</p>
   <div class="agenda">
     <p class="agenda-title"><%= @agenda.title %></p>
-    <p class="date"><%= l(@agenda.date) unless @agenda.date.nil? %></p>
+    <p class="date"><%= l(@agenda.date) if @agenda.date? %></p>
     <p class="type"><%= t("agend@agenda.types.#{@agenda.type}") %></p>
     <br />
     <p class="description"><%= @agenda.description.gsub("\n", "<br />").html_safe %></p>
