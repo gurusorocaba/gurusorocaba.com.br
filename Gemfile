@@ -17,15 +17,21 @@ end
 
 group :development do
   gem "mongoid_colored_logger", "~> 0.2.3"
+  gem "better_errors",          "~> 1.0.1"
 end
 
 group :development, :test do
   gem "capybara",           "~> 2.1.0"
-  gem "rspec-rails",        "~> 2.13.0"
+  gem "rspec-rails",        "~> 2.14.0"
   gem "factory_girl_rails", "~> 4.2.1"
 end
 
 group :test do
-  gem "simplecov",        "~> 0.7.1", :require => false
+  gem "guard",            "~> 1.8.0"
+  gem "guard-rspec",      "~> 3.1.0"
+  gem "guard-spork",      "~> 1.5.0"
+  gem "rb-fsevent",       "~> 0.9.0"
+
+  gem "simplecov",        "~> 0.7.1", require: false
   gem "database_cleaner", "~> 0.9.1"
 end
