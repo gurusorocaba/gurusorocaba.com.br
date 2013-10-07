@@ -9,6 +9,8 @@ SimpleCov.start "rails" do
   add_filter "/vendor/"
 end
 
+Coveralls.wear!
+
 require 'rubygems'
 require 'spork'
 #uncomment the following line to use spork with the debugger
@@ -26,13 +28,13 @@ Spork.prefork do
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
   RSpec.configure do |config|
-    config.color_enabled = true
+    config.color_enabled  = true
     config.full_backtrace = true
     config.mock_with :rspec
 
     config.include FactoryGirl::Syntax::Methods
-    config.include Devise::TestHelpers, :type => :controller
-    config.extend ControllerMacros, :type => :controller
+    config.include Devise::TestHelpers, type: :controller
+    config.extend ControllerMacros,     type: :controller
 
     config.before(:suite) do
       DatabaseCleaner.orm = :mongoid
