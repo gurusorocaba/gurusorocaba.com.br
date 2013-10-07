@@ -8,7 +8,7 @@ class User
   ## Database authenticatable
   field :email,              :type => String, :default => ""
   field :encrypted_password, :type => String, :default => ""
-  
+
   ## Recoverable
   field :reset_password_token,   :type => String
   field :reset_password_sent_at, :type => Time
@@ -29,6 +29,6 @@ class User
   validates_presence_of :email
   validates_presence_of :encrypted_password
   validates_presence_of :name
-    
+
   index({ created_at: 1 })
 end
