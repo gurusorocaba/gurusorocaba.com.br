@@ -27,7 +27,7 @@ class Admin::AgendasController < Admin::AdminController
       if @agenda.save
         format.html { redirect_to edit_admin_agenda_path(@agenda), notice: 'Agenda was successfully created.' }
       else
-        format.html { render action: "new" }
+        format.html { render "new" }
       end
     end
   end
@@ -39,7 +39,7 @@ class Admin::AgendasController < Admin::AdminController
       if @agenda.update_attributes(params[:agenda])
         format.html { redirect_to edit_admin_agenda_path(@agenda), notice: 'Agenda was successfully updated.' }
       else
-        format.html { render action: "edit" }
+        format.html { render "edit" }
       end
     end
   end
