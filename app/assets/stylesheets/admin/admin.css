@@ -4,7 +4,7 @@ body.admin {}
   tr.odd { background: #FFF; }
   tr.even { background: #F2F2F2; }
   th, td { padding: 2px 2px 4px 2px; }
-  
+
 body.admin h1 { font-size: 24px; line-height: 32px; }
 
 /*body.admin input[type="text"], body.admin input[type="password"], body.admin input[type="search"] { border: 1px solid #999; border-radius: 3px; font-family: inherit; font-size: 12px; color: #666; padding: 2px; margin: 0; }*/
