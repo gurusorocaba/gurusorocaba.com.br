@@ -4,28 +4,30 @@ ruby users group from sorocaba - sao paulo - brazil
 
 [![Build Status](https://travis-ci.org/gurusorocaba/gurusorocaba.com.br.png?branch=master)](https://travis-ci.org/gurusorocaba/gurusorocaba.com.br) [![Dependency Status](https://gemnasium.com/gurusorocaba/gurusorocaba.com.br.png)](https://gemnasium.com/gurusorocaba/gurusorocaba.com.br) [![Code Climate](https://codeclimate.com/github/gurusorocaba/gurusorocaba.com.br.png)](https://codeclimate.com/github/gurusorocaba/gurusorocaba.com.br)
 
-# Quer contribuir com o site do GURU?
+## Contributing
 
-- Dê um <b>fork</b>
-- Clone o repositório: <code>git clone git@github.com:gurusorocaba/gurusorocaba.com.br.git</code>
-- <code>bundle install</code> para configurar as dependências.
-- Antes de rodar o server é preciso configurar o bd e o secret_token:
+1. Fork it
+2. Clone the repository(<code>git clone git@github.com:gurusorocaba/gurusorocaba.com.br.git</code>)
+3. <code>bundle install</code> to install dependencies. 
+4. Create your feature branch(<code>git checkout -b my-new-feature</code>)
+5. Commit your changes(<code>git commit -m "Added some feature"</code>)
+6. Push to the branch(<code>git push origin my-new-feature</code>)
+7. Create new Pull request
 
-- bd
+If you have problems with database or secret_token, take the follow steps:
 
-> Para configurar o bd renomeie o arquivo mongoid.sample.yml para mongoid.yml.
-> Se der algum erro, tente executar os seguintes comandos:
-> sudo rm /var/lib/mongodb/mongod.lock
-> mongod --repair
-> sudo service mongodb start
+- <b>secret_token</b>
 
-- secret_token
+1. Create a file named secret_token.rb inside /config/initializers.
+2. Copy this piece of code inside of it(<code>Gurusorocaba::Application.config.secret_token = ""</code>).
+3. <code>rake secret</code> and copy the generated key, paste the key inside the secret_token.rb file.
 
-> É necessario um secret_token para a execução, primeiro crie um arquivo com o nome
-> secret_token.rb dentro de /config/initializers, dentro desse arquivo coloque esse
-> código <code>Gurusorocaba::Application.config.secret_token = ""</code>, vá ao terminal
-> e digite <code>rake secret</code>, esse comando irá gerar uma chave, insira essa chave
-> dentro das "" no arquivo secret_token.rb.
+- <b>bd</b>
 
-Após essas configurações sua aplicação ja deve estar pronta para rodar, faça as mudanças
-que achar necessárias e mande um <b>pull request</b> :)
+You just have to rename the file mongoid.sample.yml to mongoid.yml.
+
+If you still got errors on bd, take this steps
+
+1. sudo rm /var/lib/mongodb/mongod.lock
+2. mongod --repair
+3. sudo service mongodb start
